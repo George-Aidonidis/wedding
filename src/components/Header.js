@@ -22,7 +22,20 @@ const Header = props => (
         <Countdown date={'Sat, 02 May 2020 19:00:00'} renderer={Renderer} />
       </div>
     </div>
-    <nav />
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('about')
+            }}
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 )
 
