@@ -18,8 +18,8 @@ const Header = props => (
     <div className="content">
       <div className="inner">
         <h1>Save the date</h1>
-        <h3>Sat, May 02 2020, 18:30</h3>
-        <Countdown date={'Sat, 02 May 2020 18:30:00'} renderer={Renderer} />
+        <h3>Sat, July 24 2020, 19:00</h3>
+        <Countdown date={'Fri, 24 July 2020 19:00:00'} renderer={Renderer} />
       </div>
     </div>
     <nav>
