@@ -17,7 +17,12 @@ const Header = props => (
     </div>
     <div className="content">
       <div className="inner">
-        <h1>Save the date</h1>
+        <h1>
+          Save the new date{' '}
+          <span aria-label="emojis" role="img">
+            👑🐛
+          </span>
+        </h1>
         <h3>Fri, July 24 2020, 19:00</h3>
         <Countdown date={'Fri, 24 July 2020 19:00:00'} renderer={Renderer} />
       </div>
