@@ -1,14 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Countdown from 'react-countdown-now'
+import Countdown from 'react-countdown'
 
-const Renderer = ({ days, hours, minutes, seconds }) => (
-  <>
-    <p>
-      {days} days {hours} hours {minutes} minutes {seconds} seconds
-    </p>
-  </>
-)
+const Renderer = ({ days, hours, minutes, seconds, completed }) => {
+  if (completed) {
+    return (
+      <>
+        <div>We got married at last</div>
+        <div>
+          If you missed it, here is a
+          <span aria-label="emojis" role="img">
+            💩
+          </span>{' '}
+          to feel better
+        </div>
+      </>
+    )
+  } else {
+    return (
+      <p>
+        {days} days {hours} hours {minutes} minutes {seconds} seconds
+      </p>
+    )
+  }
+}
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
@@ -24,7 +39,10 @@ const Header = props => (
           </span>
         </h1>
         <h3>Fri, July 24 2020, 19:00</h3>
-        <Countdown date={'Fri, 24 July 2020 19:00:00'} renderer={Renderer} />
+        <Countdown
+          date={'Fri, 17 July 2020 09:00:00'}
+          renderer={Renderer}
+        ></Countdown>
       </div>
     </div>
     <nav>
