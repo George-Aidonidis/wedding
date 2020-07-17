@@ -40,7 +40,7 @@ const Header = props => (
         </h1>
         <h3>Fri, July 24 2020, 19:00</h3>
         <Countdown
-          date={'Fri, 17 July 2020 09:00:00'}
+          date={'Fri, 24 July 2020 19:00:00'}
           renderer={Renderer}
         ></Countdown>
       </div>
